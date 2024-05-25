@@ -1,0 +1,30 @@
+[
+  {
+    "dataAtualizacao": "2024-04-05T14:45:47.067Z[UTC]",
+    "dataCriacao": "2024-04-05T14:45:47.067Z[UTC]",
+    "id": 2,
+    "nome": "Teste",
+    "proprietario": "string"
+  },
+  {
+    "dataAtualizacao": "2024-04-05T14:46:12.423Z[UTC]",
+    "dataCriacao": "2024-04-05T14:46:12.423Z[UTC]",
+    "id": 3,
+    "nome": "Teste 2",
+    "proprietario": "string"
+  },
+  {
+    "dataAtualizacao": "2024-04-05T14:49:35.519Z[UTC]",
+    "dataCriacao": "2024-04-05T14:49:35.519Z[UTC]",
+    "id": 4,
+    "nome": "Teste 2",
+    "proprietario": "string"
+  },
+  {
+    "dataAtualizacao": "2024-04-05T18:27:25.042Z[UTC]",
+    "dataCriacao": "2024-04-05T18:27:25.042Z[UTC]",
+    "id": 5,
+    "nome": "Teste",
+    "proprietario": "Teste"
+  }
+]

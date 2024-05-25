@@ -1,0 +1,7 @@
+restaurante:
+  - ID: 123
+    NOME: "Novo restaurante"
+    PROPRIETARIO: "Teste"
+    - ID: 223
+    NOME: "Novo restaurante"
+    PROPRIETARIO: "Teste"
