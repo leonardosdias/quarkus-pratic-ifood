@@ -5,6 +5,10 @@ import java.util.Optional;
 
 import org.jboss.resteasy.annotations.jaxrs.PathParam;
 
+import com.github.leonardosdias.ifood.cadastro.dto.AdicionarRestauranteDTO;
+import com.github.leonardosdias.ifood.cadastro.dto.RestauranteMapper;
+
+import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.DELETE;
@@ -18,10 +22,14 @@ import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.core.Response.Status;
 
+
 @Path("/restaurantes")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class RestauranteResource {
+
+	@Inject
+	RestauranteMapper restauranteMapper;
 
 	@GET
 	public List<Restaurante> buscar() {
@@ -30,8 +38,9 @@ public class RestauranteResource {
 
 	@POST
 	@Transactional
-	public Response adicionar(Restaurante dto) {
-		dto.persist();
+	public Response adicionar(AdicionarRestauranteDTO dto) {
+		Restaurante restaurante = restauranteMapper.toRestaurante(dto);
+		restaurante.persist();
 		return Response.status(Status.CREATED).build();
 	}
 
